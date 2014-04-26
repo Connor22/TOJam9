@@ -2,12 +2,19 @@
 using System.Collections;
 
 public class MenuGUI : MonoBehaviour {
+
+	int scrw = Screen.width;
+	int scrh = Screen.height;
+
+	/*void Start () {
+
+		GUIText.pixelOffset.x = scrw / 2;
+		GUIText.pixelOffset.y = scrh / 15;
+	
+	}*/
 	
 	
 	void OnGUI () {
-		
-		int scrw = Screen.width;
-		int scrh = Screen.height;
 		
 		
 		GUI.Box(new Rect(scrw / 2 - scrw / 12,scrh / 2 + scrh / 30,scrw / 6,scrh / 3 + scrh / 10), "Select Option");

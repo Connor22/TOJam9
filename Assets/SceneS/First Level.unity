@@ -855,6 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifePool: 10
+  PlayerCount: 2
 --- !u!1 &1693885166
 GameObject:
   m_ObjectHideFlags: 0

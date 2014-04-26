@@ -15,6 +15,7 @@ public class PlayerControl : MonoBehaviour {
 	private int BulletTime = 0;
 	private float newPos;
 	private PlayerHealth Parent;
+	private SharkHealth SharkRef;
 
 	// Use this for initialization
 	void Start () {
@@ -39,12 +40,23 @@ public class PlayerControl : MonoBehaviour {
 		if (collision.gameObject.tag == "Enemy") {
 			newPos = Random.Range (-9.0f, 9.0f);
 			Parent = transform.parent.GetComponent<PlayerHealth>();
+			SharkRef = GameObject.Find("Shark").GetComponent<SharkHealth>();
 			if (Parent.LifePool > 0) {
 				transform.position = new Vector2 (18.0f, newPos);
 				Parent.LifePool -= 1;
 			}
 			else{
-				Destroy(gameObject);
+				Parent.PlayerCount -= 1;
+				if(Parent.PlayerCount > 0){
+					Destroy(gameObject);
+				}
+				else {
+					if (SharkRef.SharkHP == 0){
+						Application.LoadLevel ("Draw Screen");
+					}else{
+						Application.LoadLevel ("Shark Win");
+					}
+				}
 			}
 		}
 	}
