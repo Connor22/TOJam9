@@ -8,13 +8,13 @@ public class MenuGUI : MonoBehaviour {
 	GameObject titleText;
 
 	void Start () {
-		titleText = new GameObject("Title Text");
+		//titleText = new GameObject("Title Text");
 		titleText.AddComponent("GUIText");
 		titleText.guiText.text = "10,000 Sheep Under the Sea";
 		titleText.guiText.alignment = TextAlignment.Center;
-		titleText.guiText.pixelOffset = new Vector2 (scrw / 2, scrh / 2);
+		titleText.guiText.pixelOffset = new Vector2 (scrw / 2 - scrw / 4, scrh / 2);
 	}
-	
+
 	
 	void OnGUI () {
 		

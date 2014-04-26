@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 232327305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .82118988, y: -.0811653137, z: 0}
+  m_LocalPosition: {x: .927552104, y: -.0811653137, z: 0}
   m_LocalScale: {x: 60.6609421, y: 32.2126923, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 30
-  Bullet: {fileID: 100000, guid: 85ad6b38c6f50a54fb2a19f613cc3d91, type: 2}
+  Bullet: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
   Fire: SharkFire
   SetBulletDelay: 35
 --- !u!60 &443888275
@@ -398,7 +398,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
       propertyPath: Bullet
       value: 
-      objectReference: {fileID: 100000, guid: 85ad6b38c6f50a54fb2a19f613cc3d91, type: 2}
+      objectReference: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
     - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
       propertyPath: SetBulletDelay
       value: 35
