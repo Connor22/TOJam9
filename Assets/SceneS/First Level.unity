@@ -275,7 +275,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2536298689
-  m_Sprite: {fileID: 21300016, guid: 01abc7cf85bc3e749905be246be72539, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed5e1522d38ae6b4880af5164513fd4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &443888278
 Transform:
@@ -422,6 +422,11 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed5e1522d38ae6b4880af5164513fd4f,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
   m_RootGameObject: {fileID: 443888273}
@@ -519,6 +524,7 @@ GameObject:
   - 50: {fileID: 624054546}
   - 114: {fileID: 624054548}
   - 60: {fileID: 624054545}
+  - 95: {fileID: 624054549}
   m_Layer: 8
   m_Name: Player2
   m_TagString: Player
@@ -592,7 +598,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2536298689
-  m_Sprite: {fileID: 21300008, guid: 01abc7cf85bc3e749905be246be72539, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58d9b5a0ea23fb44da227b5a17ecfaf1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &624054548
 MonoBehaviour:
@@ -613,6 +619,20 @@ MonoBehaviour:
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
   SetBulletDelay: 35
+--- !u!95 &624054549
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624054543}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71198a06c1e448b4cbb19b50e2e050f8, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1001 &1038091507
 Prefab:
   m_ObjectHideFlags: 0
@@ -676,6 +696,19 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 2536298689
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58d9b5a0ea23fb44da227b5a17ecfaf1,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
   m_RootGameObject: {fileID: 624054543}
@@ -747,6 +780,7 @@ GameObject:
   - 50: {fileID: 1157207211}
   - 114: {fileID: 1157207214}
   - 60: {fileID: 1157207210}
+  - 95: {fileID: 1157207215}
   m_Layer: 8
   m_Name: Player1
   m_TagString: Player
@@ -809,7 +843,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2536298689
-  m_Sprite: {fileID: 21300004, guid: 01abc7cf85bc3e749905be246be72539, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5eece0dd4507f641ba6079470d773f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1157207213
 Transform:
@@ -841,6 +875,20 @@ MonoBehaviour:
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 1157207209}
   SetBulletDelay: 35
+--- !u!95 &1157207215
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1157207209}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6af125ed28d29854faeafde1f7949883, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &1310215647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1094,11 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d5eece0dd4507f641ba6079470d773f7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
   m_RootGameObject: {fileID: 1157207209}
