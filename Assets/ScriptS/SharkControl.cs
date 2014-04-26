@@ -2,9 +2,7 @@
 using System.Collections;
 
 public class SharkControl : MonoBehaviour {
-	
-	public GameObject Shark;
-	public float speed = 10.0F;
+
 	public float force = 100.0F;
 
 	// Use this for initialization

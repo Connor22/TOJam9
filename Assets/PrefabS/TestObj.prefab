@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6761f120a27ddcd4daee57333ca9c858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 100
+  force: 50
   HorizontalName: 
   VerticalName: 
 --- !u!212 &21200000
