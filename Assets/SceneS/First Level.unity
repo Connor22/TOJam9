@@ -211,8 +211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 30
-  Bullet: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
-  Fire: SharkFire
+  bombForce: 50
+  Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
+  Bomb: {fileID: 100000, guid: 86f7507aab7ae8242a62643caed7f2b5, type: 2}
   SetBulletDelay: 35
 --- !u!60 &443888275
 PolygonCollider2D:
@@ -386,22 +387,6 @@ Prefab:
     - target: {fileID: 400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400002, guid: cf335087d0f31d54baa216d907748cff, type: 2}
-      propertyPath: SharkHP
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
-      propertyPath: Fire
-      value: SharkFire
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
-      propertyPath: Bullet
-      value: 
-      objectReference: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
-    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
-      propertyPath: SetBulletDelay
-      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}

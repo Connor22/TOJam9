@@ -77,8 +77,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 30
-  Bullet: {fileID: 0}
-  Fire: 
+  bombForce: 50
+  Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
+  Bomb: {fileID: 100000, guid: 86f7507aab7ae8242a62643caed7f2b5, type: 2}
+  SetBulletDelay: 35
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc1b0d6470ef244c974a76164dfa374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SharkHP: 100
+  SharkHP: 300
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
