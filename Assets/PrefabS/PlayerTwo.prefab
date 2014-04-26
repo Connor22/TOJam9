@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 60: {fileID: 6000000}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: PlayerTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +76,8 @@ MonoBehaviour:
   HorizontalName: P2Horizontal
   VerticalName: P2Vertical
   Fire: P2Fire
-  Bullet: {fileID: 0}
-  CurrentPos: {x: 0, y: 0, z: 0}
+  Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
+  Self: {fileID: 100000}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

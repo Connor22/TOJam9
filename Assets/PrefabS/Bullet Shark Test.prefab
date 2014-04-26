@@ -13,8 +13,8 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Untagged
+  m_Name: Bullet Shark Test
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.5598192, y: 5.8153677, z: 0}
-  m_LocalScale: {x: 1.0704335, y: .174907535, z: 1}
+  m_LocalScale: {x: 2, y: .400000006, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b54c70a10be635468a1f143f67f0b79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -100
+  speed: 100
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -4,16 +4,24 @@ using System.Collections;
 public class SharkControl : MonoBehaviour {
 
 	public float force = 100.0F;
-
+	private int BulletTime = 0;
+	public GameObject Bullet;
+	private Vector3 CurrentPos;
+	public string Fire;
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.AddForce(new Vector2(0f, force * Input.GetAxis("P3Vertical")));
-		if (rigidbody2D.velocity.x > 0){
-			rigidbody2D.velocity = new Vector2 (0f, rigidbody2D.velocity.x);
+				rigidbody2D.AddForce (new Vector2 (0f, force * Input.GetAxis ("P3Vertical")));
+		        CurrentPos = new Vector3(transform.position.x + 7f, transform.position.y);
+				if (BulletTime > 0) {
+						BulletTime -= 1;
+				}
+				if (Input.GetAxis (Fire) > 0 && BulletTime == 0) {
+						Instantiate (Bullet, CurrentPos, transform.rotation); 
+						BulletTime = 15;
+				}
 		}
 	}
-}
