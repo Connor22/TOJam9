@@ -26,7 +26,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Player3
-  m_Speed: 1
+  m_Speed: .25
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: dc4658f6ceafa224aba49ba593b18aca, type: 2}

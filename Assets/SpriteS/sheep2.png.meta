@@ -48,37 +48,37 @@ TextureImporter:
     - name: sheep2_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 100
-        width: 39
-        height: 31
+        x: 0
+        y: 99
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sheep2_1
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 66
-        width: 40
-        height: 31
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sheep2_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 34
-        width: 39
-        height: 31
+        x: 0
+        y: 33
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sheep2_3
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 40
-        height: 31
+        width: 41
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 
