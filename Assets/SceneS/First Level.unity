@@ -213,6 +213,7 @@ MonoBehaviour:
   force: 30
   Bullet: {fileID: 100000, guid: 85ad6b38c6f50a54fb2a19f613cc3d91, type: 2}
   Fire: SharkFire
+  SetBulletDelay: 35
 --- !u!60 &443888275
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -398,6 +399,10 @@ Prefab:
       propertyPath: Bullet
       value: 
       objectReference: {fileID: 100000, guid: 85ad6b38c6f50a54fb2a19f613cc3d91, type: 2}
+    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: SetBulletDelay
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
   m_RootGameObject: {fileID: 443888273}
@@ -588,7 +593,7 @@ MonoBehaviour:
   Fire: P2Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
-  SetBulletTime: 35
+  SetBulletDelay: 0
 --- !u!1001 &1038091507
 Prefab:
   m_ObjectHideFlags: 0
@@ -808,7 +813,7 @@ MonoBehaviour:
   Fire: P1Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 1157207209}
-  SetBulletTime: 35
+  SetBulletDelay: 0
 --- !u!1 &1310215647
 GameObject:
   m_ObjectHideFlags: 0
