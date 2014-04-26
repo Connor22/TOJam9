@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
+  - 95: {fileID: 9500000}
   m_Layer: 12
   m_Name: SineFish
   m_TagString: Enemy
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.74130952, y: 1.99821091, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: -5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -56,6 +57,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .330000013, y: .25999999}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c77ba948ca3e5544924ab8f7e9538e0, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: .100000001
   amplitude: 2
-  period: 3
+  period: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -91,7 +106,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2536298689
-  m_Sprite: {fileID: 21300004, guid: 50b0dfdadbd561a449347019df12203e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d5e7a9ca4966cc409df397232b8534f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

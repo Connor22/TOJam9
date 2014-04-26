@@ -79,9 +79,16 @@ MonoBehaviour:
   force: 30
   bombForce: 50
   Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
+  torpedoCost: 5
   Bomb: {fileID: 100000, guid: 86f7507aab7ae8242a62643caed7f2b5, type: 2}
+  bombCost: 10
   Follow: {fileID: 0}
+  followCost: 30
   Sin: {fileID: 0}
+  sinCost: 15
+  energy: 100
+  maximumEnergy: 200
+  energyPerSecond: 5
   SetBulletDelay: 35
 --- !u!114 &11400002
 MonoBehaviour:
@@ -116,7 +123,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2536298689
-  m_Sprite: {fileID: 21300016, guid: 01abc7cf85bc3e749905be246be72539, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d5e7a9ca4966cc409df397232b8534f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

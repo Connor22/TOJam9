@@ -13,10 +13,10 @@ public class SharkControl : MonoBehaviour {
 	public float followCost = 30.0f;
 	public GameObject Sin;
 	public float sinCost = 15.0f;
-	public int SetBulletDelay;
 	public float energy = 100f;
 	public float maximumEnergy = 200f;
 	public float energyPerSecond = 5f;
+	public int SetBulletDelay;
 	
 	private Vector3 BulletPos;
 	private int BulletTime = 0;
