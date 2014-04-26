@@ -50,6 +50,7 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Background
     userID: 1
     uniqueID: 1805085795
@@ -57,4 +58,25 @@ TagManager:
   - name: Player
     userID: 2
     uniqueID: 226579909
+=======
+  - name: Default
+    userID: 1
+    uniqueID: 3363470833
+    locked: 0
+  - name: Background
+    userID: 2
+    uniqueID: 1535931219
+    locked: 0
+  - name: Character
+    userID: 4
+    uniqueID: 2511236001
+    locked: 0
+  - name: Foreground
+    userID: 3
+    uniqueID: 1024582385
+    locked: 0
+  - name: UI
+    userID: 5
+    uniqueID: 149272721
+>>>>>>> ecfccc15a4b7a3365d2bf9aa9f754b20b4adcba9
     locked: 0
