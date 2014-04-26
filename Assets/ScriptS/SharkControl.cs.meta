@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: bc74594d42b582d4f93ee4738ae481ab
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
+  - Bomb: {fileID: 100000, guid: 86f7507aab7ae8242a62643caed7f2b5, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
