@@ -33,7 +33,7 @@ public class SharkControl : MonoBehaviour {
 		}
 		if ((BulletTime == 0) && (Input.GetAxis("SharkFireBomb") > 0)) {
 			GameObject bomb = Instantiate(Bomb, BulletPos, transform.rotation) as GameObject;
-			bomb.rigidbody2D.AddForce(new Vector2(bombForce, 0f));
+			bomb.rigidbody2D.AddForce(new Vector2(bombForce + Random.Range(-bombForce * 0.2f, bombForce * 0.2f), 0f)); // throw bomb with some force variance
 			bomb.GetComponent<BombBehaviour>().canExplode = true;
 
 			BulletTime = SetBulletDelay;
