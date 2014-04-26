@@ -27,12 +27,15 @@ public class SharkControl : MonoBehaviour {
 		}
 
 		if ((BulletTime == 0) && (Input.GetAxis("SharkFireTorpedo") > 0)) {
-			Instantiate(Torpedo, BulletPos, transform.rotation); 
+			Instantiate(Torpedo, BulletPos, transform.rotation);
+
 			BulletTime = SetBulletDelay;
 		}
 		if ((BulletTime == 0) && (Input.GetAxis("SharkFireBomb") > 0)) {
 			GameObject bomb = Instantiate(Bomb, BulletPos, transform.rotation) as GameObject;
 			bomb.rigidbody2D.AddForce(new Vector2(bombForce, 0f));
+			bomb.GetComponent<BombBehaviour>().canExplode = true;
+
 			BulletTime = SetBulletDelay;
 		}
 		// end firing

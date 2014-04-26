@@ -29,7 +29,7 @@ public class PlayerControl : MonoBehaviour {
 		CurrentPos = new Vector3(transform.position.x - 1.5f, transform.position.y - 0.5f);
 		if (BulletTime > 0) {
 			BulletTime -= 1;
-				}
+		}
 		if (Input.GetAxis (Fire) > 0 && BulletTime == 0){
 			Instantiate(Bullet, CurrentPos, transform.rotation); 
 			BulletTime = SetBulletDelay;
