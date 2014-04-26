@@ -33,10 +33,18 @@ public class StarfishBehaviour : MonoBehaviour {
 
 	void Update () {
 
-			target = FindClosest();
-			transform.LookAt(target.transform);
-			transform.position = Vector2.MoveTowards((Vector2) transform.position, 
-		                                         (Vector2) target.transform.position, speed);
-	
+		target = FindClosest();
+		Quaternion rotation = new Quaternion();
+		transform.LookAt(target.transform);
+		transform.position = Vector2.MoveTowards((Vector2) transform.position, 
+	                                         (Vector2) target.transform.position, speed);
+		rotation.SetLookRotation(Vector3.forward, Vector3.up);
+		transform.localRotation = rotation;
+
+
+	}
+
+	void OnCollisionEnter2D (Collision2D collision) {
+		Destroy (gameObject);
 	}
 }
