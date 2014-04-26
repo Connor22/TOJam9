@@ -5,13 +5,15 @@ public class MenuGUI : MonoBehaviour {
 
 	int scrw = Screen.width;
 	int scrh = Screen.height;
+	GameObject titleText;
 
-	/*void Start () {
-
-		GUIText.pixelOffset.x = scrw / 2;
-		GUIText.pixelOffset.y = scrh / 15;
-	
-	}*/
+	void Start () {
+		titleText = new GameObject("Title Text");
+		titleText.AddComponent("GUIText");
+		titleText.guiText.text = "10,000 Sheep Under the Sea";
+		titleText.guiText.alignment = TextAlignment.Center;
+		titleText.guiText.pixelOffset = new Vector2 (scrw / 2, scrh / 2);
+	}
 	
 	
 	void OnGUI () {
