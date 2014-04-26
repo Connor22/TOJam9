@@ -7,6 +7,8 @@ public class SharkControl : MonoBehaviour {
 	public float bombForce = 50.0f;
 	public GameObject Torpedo;
 	public GameObject Bomb;
+	public GameObject Follow;
+	public GameObject Sin;
 	public int SetBulletDelay;
 
 	private Vector3 BulletPos;
@@ -36,6 +38,16 @@ public class SharkControl : MonoBehaviour {
 			bomb.rigidbody2D.AddForce(new Vector2(bombForce + Random.Range(-bombForce * 0.2f, bombForce * 0.2f), 0f)); // throw bomb with some force variance
 			bomb.GetComponent<BombBehaviour>().canExplode = true;
 
+			BulletTime = SetBulletDelay;
+		}
+
+		if ((BulletTime == 0) && (Input.GetAxis("SharkFireSin") > 0)) {
+			Instantiate(Sin, BulletPos, transform.rotation);
+			BulletTime = SetBulletDelay;
+		}
+
+		if ((BulletTime == 0) && (Input.GetAxis("SharkFireFollow") > 0)) {
+			Instantiate(Follow, BulletPos, transform.rotation);
 			BulletTime = SetBulletDelay;
 		}
 		// end firing

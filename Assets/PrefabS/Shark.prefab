@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 60: {fileID: 6000000}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Shark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,6 +80,8 @@ MonoBehaviour:
   bombForce: 50
   Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
   Bomb: {fileID: 100000, guid: 86f7507aab7ae8242a62643caed7f2b5, type: 2}
+  Follow: {fileID: 0}
+  Sin: {fileID: 0}
   SetBulletDelay: 35
 --- !u!114 &11400002
 MonoBehaviour:

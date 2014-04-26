@@ -12,7 +12,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Bomb Fish
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: 2f80c0ff154d10a4b9877cbbe8739c61, type: 2}
+  canExplode: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

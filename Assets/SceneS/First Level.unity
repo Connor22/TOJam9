@@ -191,7 +191,7 @@ GameObject:
   - 114: {fileID: 443888274}
   - 114: {fileID: 443888279}
   - 60: {fileID: 443888275}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Shark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,8 +211,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 30
-  Bullet: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
-  Fire: SharkFire
+  bombForce: 50
+  Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
+  Bomb: {fileID: 100000, guid: 4073c677078662c4c8a1d8eebe01ac2b, type: 2}
+  Follow: {fileID: 100000, guid: 25990122d46535e439582e6385332f83, type: 2}
+  Sin: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
   SetBulletDelay: 35
 --- !u!60 &443888275
 PolygonCollider2D:
@@ -308,7 +311,7 @@ GameObject:
   - 4: {fileID: 538018929}
   - 61: {fileID: 538018930}
   - 50: {fileID: 538018931}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RightBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,6 +405,22 @@ Prefab:
     - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
       propertyPath: SetBulletDelay
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: Bomb
+      value: 
+      objectReference: {fileID: 100000, guid: 4073c677078662c4c8a1d8eebe01ac2b, type: 2}
+    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: Follow
+      value: 
+      objectReference: {fileID: 100000, guid: 25990122d46535e439582e6385332f83, type: 2}
+    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: Sin
+      value: 
+      objectReference: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
+    - target: {fileID: 100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
@@ -502,7 +521,7 @@ GameObject:
   - 60: {fileID: 624054545}
   m_Layer: 8
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,6 +672,10 @@ Prefab:
       propertyPath: SetBulletDelay
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
   m_RootGameObject: {fileID: 624054543}
@@ -668,7 +691,7 @@ GameObject:
   - 4: {fileID: 1065417407}
   - 50: {fileID: 1065417409}
   - 61: {fileID: 1065417408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LowerBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +749,7 @@ GameObject:
   - 60: {fileID: 1157207210}
   m_Layer: 8
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -870,7 +893,7 @@ GameObject:
   - 4: {fileID: 1693885169}
   - 50: {fileID: 1693885168}
   - 61: {fileID: 1693885167}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: UpperBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +947,7 @@ GameObject:
   - 4: {fileID: 1750546173}
   - 61: {fileID: 1750546175}
   - 50: {fileID: 1750546174}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LeftBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,6 +1041,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
       propertyPath: SetBulletDelay
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}

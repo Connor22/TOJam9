@@ -18,7 +18,7 @@ public class SineBehaviour : MonoBehaviour {
 	void Update () {
 
 		newPosition = new Vector3(transform.position.x + speed, 
-		                          amplitude * (originalY + Mathf.Sin (Time.time * period)), 0f);
+		                          amplitude * (originalY + Mathf.Sin (transform.position.x * period)), 0f);
 		transform.position = newPosition;
 
 	}
