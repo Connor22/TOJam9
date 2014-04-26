@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour {
 	public string Fire;
 	public GameObject Bullet;
 	public GameObject Self;
+	public int SetBulletDelay;
 
 	private Vector3 CurrentPos;
 	private int BulletTime = 0;
@@ -24,13 +25,13 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rigidbody2D.AddForce(new Vector2(force * Input.GetAxis(HorizontalName), force * Input.GetAxis(VerticalName)));
-		CurrentPos = new Vector3(transform.position.x - 5f, transform.position.y);
+		CurrentPos = new Vector3(transform.position.x - 1.5f, transform.position.y - 0.5f);
 		if (BulletTime > 0) {
 			BulletTime -= 1;
 				}
 		if (Input.GetAxis (Fire) > 0 && BulletTime == 0){
 			Instantiate(Bullet, CurrentPos, transform.rotation); 
-			BulletTime = 15;
+			BulletTime = SetBulletDelay;
 		}
 	}
 

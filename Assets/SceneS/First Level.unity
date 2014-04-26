@@ -191,7 +191,7 @@ GameObject:
   - 114: {fileID: 443888274}
   - 114: {fileID: 443888279}
   - 60: {fileID: 443888275}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - 50: {fileID: 624054546}
   - 114: {fileID: 624054548}
   - 60: {fileID: 624054545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,6 +588,7 @@ MonoBehaviour:
   Fire: P2Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+  SetBulletTime: 35
 --- !u!1001 &1038091507
 Prefab:
   m_ObjectHideFlags: 0
@@ -634,6 +635,14 @@ Prefab:
     - target: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
       propertyPath: m_Name
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: SetBulletTime
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
@@ -706,7 +715,7 @@ GameObject:
   - 50: {fileID: 1157207211}
   - 114: {fileID: 1157207214}
   - 60: {fileID: 1157207210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,6 +808,7 @@ MonoBehaviour:
   Fire: P1Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 1157207209}
+  SetBulletTime: 35
 --- !u!1 &1310215647
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +996,14 @@ Prefab:
     - target: {fileID: 100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
+      propertyPath: SetBulletTime
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}

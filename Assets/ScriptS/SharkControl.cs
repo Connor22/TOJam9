@@ -4,10 +4,12 @@ using System.Collections;
 public class SharkControl : MonoBehaviour {
 
 	public float force = 100.0F;
-	private int BulletTime = 0;
 	public GameObject Bullet;
-	private Vector3 CurrentPos;
 	public string Fire;
+	public int SetBulletDelay;
+
+	private Vector3 CurrentPos;
+	private int BulletTime = 0;
 	// Use this for initialization
 	void Start () {
 	}
@@ -21,7 +23,7 @@ public class SharkControl : MonoBehaviour {
 				}
 				if (Input.GetAxis (Fire) > 0 && BulletTime == 0) {
 						Instantiate (Bullet, CurrentPos, transform.rotation); 
-						BulletTime = 15;
+						BulletTime = SetBulletDelay;
 				}
 		}
 	}
