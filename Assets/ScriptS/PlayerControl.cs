@@ -4,12 +4,14 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour {
 
 	public float force = 100f;
+	public float spawnPos;
 	public string HorizontalName;
 	public string VerticalName;
 	public string Fire;
 	public GameObject Bullet;
 	public GameObject Self;
 	public int SetBulletDelay;
+
 
 	private Vector3 CurrentPos;
 	private int BulletTime = 0;
@@ -20,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		newPos = Random.Range (-9.0f, 9.0f);
-		transform.position = new Vector2 (18.0f, newPos);
+		transform.position = new Vector2 (spawnPos, newPos);
 	}
 
 	// Update is called once per frame
@@ -42,7 +44,7 @@ public class PlayerControl : MonoBehaviour {
 			Parent = transform.parent.GetComponent<PlayerHealth>();
 			SharkRef = GameObject.Find("Shark").GetComponent<SharkHealth>();
 			if (Parent.LifePool > 0) {
-				transform.position = new Vector2 (18.0f, newPos);
+				transform.position = new Vector2 (spawnPos, newPos);
 				Parent.LifePool -= 1;
 			}
 			else{
@@ -51,7 +53,7 @@ public class PlayerControl : MonoBehaviour {
 					Destroy(gameObject);
 				}
 				else {
-					if (SharkRef.SharkHP == 0){
+					if (SharkRef.SharkHPCur == 0){
 						Application.LoadLevel ("Draw Screen");
 					}else{
 						Application.LoadLevel ("Shark Win");

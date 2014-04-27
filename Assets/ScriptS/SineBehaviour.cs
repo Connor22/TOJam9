@@ -11,15 +11,15 @@ public class SineBehaviour : MonoBehaviour {
 	Vector3 newPosition;
 
 	void Start () {
-		originalY = transform.position.y;
+		originalY = transform.position.y + 0.5f;
 
 	}
 
 	void Update () {
 
-		newPosition = new Vector3(transform.position.x + speed, 
+		newPosition = new Vector3(transform.position.x + speed * 0.1f, 
 		                          amplitude * (originalY + Mathf.Sin (transform.position.x * period)), 0f);
-		transform.position = newPosition;
+		transform.localPosition = newPosition;
 
 	}
 
