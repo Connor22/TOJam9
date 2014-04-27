@@ -561,7 +561,7 @@ MonoBehaviour:
   Follow: {fileID: 100000, guid: 25990122d46535e439582e6385332f83, type: 2}
   followCost: 20
   followForce: 40
-  Sin: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
+  Sin: {fileID: 100000, guid: 5096503344760794786583d11e4db625, type: 2}
   sinCost: 10
   energy: 100
   maximumEnergy: 200
@@ -807,7 +807,7 @@ Prefab:
     - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
       propertyPath: Sin
       value: 
-      objectReference: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
+      objectReference: {fileID: 100000, guid: 5096503344760794786583d11e4db625, type: 2}
     - target: {fileID: 100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
       propertyPath: m_Layer
       value: 10
