@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: Health War
+  m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d27cae468284b04e93f1d0337a0e75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarGUIHeight: 32
+  healthBarGUIWidth: 128
+  energyBarGUIHeight: 32
+  energyBarGUIWidth: 128
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
