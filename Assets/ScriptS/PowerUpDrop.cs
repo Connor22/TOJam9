@@ -13,7 +13,8 @@ public class PowerUpDrop : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		if (powerUp > (dropRate - 5) && collision.gameObject.tag == "Bullet"){
+		if (powerUp > (dropRate - 5) && collision.gameObject.tag == "Bullet" && 
+		    transform.position.x > 0){
 			Instantiate(Crate, transform.position, transform.rotation);
 		}
 	}
