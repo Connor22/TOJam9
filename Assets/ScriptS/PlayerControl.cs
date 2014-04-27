@@ -9,9 +9,11 @@ public class PlayerControl : MonoBehaviour {
 	public string VerticalName;
 	public string Fire;
 	public GameObject Bullet;
+	public GameObject Super;
 	public GameObject Self;
 	public int SetBulletDelay;
 	public int invincible;
+	public int powerTime;
 
 
 	private Vector3 CurrentPos;
@@ -20,23 +22,47 @@ public class PlayerControl : MonoBehaviour {
 	private PlayerHealth Parent;
 	private SharkHealth SharkRef;
 	private float invCounter;
+	private float powerCounter;
+	private bool isPowerUp;
+	private int speed;
 
 	// Use this for initialization
 	void Start () {
 		newPos = Random.Range (-9.0f, 9.0f);
 		transform.position = new Vector2 (spawnPos, newPos);
 		invCounter = -1f;
+		powerCounter = -1f;
+		isPowerUp = false;
+		speed = 1;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.AddForce(new Vector2(force * Input.GetAxis(HorizontalName), force * Input.GetAxis(VerticalName)));
+		if (powerCounter > -1){
+			if (powerCounter > powerTime){
+				isPowerUp = false;
+				powerCounter = -1f;
+			} else {
+				invCounter += Time.deltaTime;
+			}
+		}
+		if (isPowerUp){
+			speed = 2;
+		} else {
+			speed = 1;
+		}
+		rigidbody2D.AddForce(new Vector2(speed * force * Input.GetAxis(HorizontalName), 
+		                                 speed * force * Input.GetAxis(VerticalName)));
 		CurrentPos = new Vector3(transform.position.x - 1.5f, transform.position.y - 0.5f);
 		if (BulletTime > 0) {
 			BulletTime -= 1;
 		}
 		if (Input.GetAxis (Fire) > 0 && BulletTime == 0){
-			Instantiate(Bullet, CurrentPos, transform.rotation); 
+			if (isPowerUp) {
+				Instantiate(Super, CurrentPos, transform.rotation);
+			}else {
+				Instantiate(Bullet, CurrentPos, transform.rotation);
+			}
 			BulletTime = SetBulletDelay;
 		}
 		if (invCounter > -1){
@@ -64,8 +90,7 @@ public class PlayerControl : MonoBehaviour {
 				transform.position = new Vector2 (spawnPos, newPos);
 				Parent.LifePool -= 1;
 				invCounter = 0f;
-			}
-			else{
+			} else {
 				Parent.PlayerCount -= 1;
 				if(Parent.PlayerCount > 0){
 					Destroy(gameObject);
@@ -73,7 +98,7 @@ public class PlayerControl : MonoBehaviour {
 				else {
 					if (SharkRef.SharkHPCur == 0){
 						Application.LoadLevel ("Draw Screen");
-					}else{
+					} else {
 						Application.LoadLevel ("Shark Win");
 					}
 				}

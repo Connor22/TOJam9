@@ -41,7 +41,11 @@ public class SharkHealth : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision){
 		if (collision.gameObject.tag != "Bounds" && invCounter == -1) {
-			SharkHPCur -= 10;
+			if (collision.gameObject.tag != "Super"){
+				SharkHPCur -= 10;
+			} else {
+				SharkHPCur -= 20;
+			}
 			invCounter = 0f;
 			LifeRef = GameObject.Find ("Players").GetComponent<PlayerHealth> ();
 			if (SharkHPCur == 0.0) {

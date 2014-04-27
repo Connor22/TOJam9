@@ -88,12 +88,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 30
+  spawnPos: 0
   HorizontalName: P2Horizontal
   VerticalName: P2Vertical
   Fire: P2Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
+  Super: {fileID: 100000, guid: dbdc27c67633e2c4e843241563015f6a, type: 2}
   Self: {fileID: 100000}
   SetBulletDelay: 35
+  invincible: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
