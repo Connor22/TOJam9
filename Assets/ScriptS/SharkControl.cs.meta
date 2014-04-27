@@ -4,7 +4,9 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - Torpedo: {fileID: 100000, guid: ad0d7a0988f8b00478f6f5a1606aeefd, type: 2}
-  - Bomb: {fileID: 100000, guid: 86f7507aab7ae8242a62643caed7f2b5, type: 2}
+  - Bomb: {fileID: 100000, guid: 4073c677078662c4c8a1d8eebe01ac2b, type: 2}
+  - Follow: {fileID: 100000, guid: 25990122d46535e439582e6385332f83, type: 2}
+  - Sin: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
