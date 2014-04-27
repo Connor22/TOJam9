@@ -466,6 +466,8 @@ MonoBehaviour:
   SetBulletDelay: 50
   EnergyFull: {fileID: 2800000, guid: bbf1ae30ef4da904b93c2b4619ff6de1, type: 3}
   EnergyEmpty: {fileID: 2800000, guid: 9e1b82f33584cae4696ae2cdb188eb22, type: 3}
+  LIGHTNING: {fileID: 2800000, guid: 8071476386dbb854a959d238095ae5a1, type: 3}
+  divider: 15
 --- !u!60 &443888275
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -568,6 +570,7 @@ MonoBehaviour:
   LifeBarHurt: {fileID: 2800000, guid: e44e1a51eddefc347ae04a557a4bb768, type: 3}
   Shark1: {fileID: 2800000, guid: d5ab2ba49347dbb49860e928e47ed527, type: 3}
   SharkHPCur: 0
+  divider: 15
   invincible: 2
 --- !u!95 &443888280
 Animator:
@@ -607,7 +610,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538018928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.5276108, y: 0, z: 0}
+  m_LocalPosition: {x: 18.7611256, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1999641716}
@@ -753,6 +756,18 @@ Prefab:
       propertyPath: invincible
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: divider
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: divider
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: LIGHTNING
+      value: 
+      objectReference: {fileID: 2800000, guid: 8071476386dbb854a959d238095ae5a1, type: 3}
     m_RemovedComponents:
     - {fileID: 6000000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
@@ -959,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6761f120a27ddcd4daee57333ca9c858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 30
+  force: 50
   spawnPos: 15
   HorizontalName: P2Horizontal
   VerticalName: P2Vertical
@@ -1269,7 +1284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6761f120a27ddcd4daee57333ca9c858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 30
+  force: 50
   spawnPos: 15
   HorizontalName: P1Horizontal
   VerticalName: P1Vertical
@@ -1610,6 +1625,10 @@ Prefab:
       propertyPath: invincible
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
+      propertyPath: force
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
@@ -1803,6 +1822,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
       propertyPath: invincible
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: force
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}

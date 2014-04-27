@@ -8,11 +8,13 @@ public class SharkHealth : MonoBehaviour {
 	public Texture2D LifeBarHurt;
 	public Texture2D Shark1;
 	public float SharkHPCur;
+	public float divider;
 	public int invincible;
 
 
 	private PlayerHealth LifeRef;
 	private float LifeWidth;
+	private float height;
 	private float invCounter;
 
 	// Use this for initialization
@@ -48,13 +50,15 @@ public class SharkHealth : MonoBehaviour {
 					} else {
 							Application.LoadLevel ("Sheep Win");
 					}
+					}
 			}
 		}
-	}
+
 
 	void OnGUI(){
-		GUI.DrawTexture (new Rect (50f, 10f, Screen.width / 4, 30f), LifeBarHurt, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (50f, 10f, Screen.width / 4 / (SharkHPMax / SharkHPCur), 30f), LifeBarFull, ScaleMode.StretchToFill);
-		GUI.DrawTexture (new Rect (10f, 10f, 40f, 30f), Shark1, ScaleMode.ScaleToFit);
+		height = Screen.height / divider;
+		GUI.DrawTexture (new Rect (10f, 10f, Screen.width / 4, height), LifeBarHurt, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (10f, 10f, Screen.width / 4 / (SharkHPMax / SharkHPCur), height), LifeBarFull, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (Screen.width / 4 + 15f, 10f, height, height), Shark1, ScaleMode.ScaleToFit);
 	}
 }
