@@ -5,11 +5,13 @@ public class StarfishBehaviour : MonoBehaviour {
 
 	//public float speed;
 	public float force;
+	public float spin;
 
 	private GameObject target;
 	
 	void Start () {
-	
+		Vector3 torque = new Vector3 (0, 0, spin);
+		rigidbody2D.angularVelocity = spin;
 	}
 
 	GameObject FindClosest(){
