@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour {
 	private float invCounter;
 	private float powerCounter;
 	private int speed;
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,7 @@ public class PlayerControl : MonoBehaviour {
 		invCounter = -1f;
 		powerCounter = -1f;
 		speed = 1;
+		anim = gameObject.GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -42,11 +44,8 @@ public class PlayerControl : MonoBehaviour {
 				powerCounter = -1f;
 				speed = 1;
 			} else {
-				invCounter += Time.deltaTime;
-				speed = 2;
+				powerCounter += Time.deltaTime;
 			}
-		} else {
-			speed = 1;
 		}
 		rigidbody2D.AddForce(new Vector2(speed * force * Input.GetAxis(HorizontalName), 
 		                                 speed * force * Input.GetAxis(VerticalName)));
@@ -81,6 +80,7 @@ public class PlayerControl : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision){
 		if (collision.gameObject.tag == "Power") {
 			powerCounter = 0f;
+			speed = 2;
 		}
 		if (collision.gameObject.tag == "1Up") {
 			Parent = transform.parent.GetComponent<PlayerHealth>();
