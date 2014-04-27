@@ -86,6 +86,7 @@ GameObject:
   - 92: {fileID: 741154775}
   - 124: {fileID: 741154774}
   - 81: {fileID: 741154773}
+  - 114: {fileID: 741154778}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -154,6 +155,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &741154778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741154772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ed553dbe2de5048bd2079e86b22e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1362082525
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,68 +315,6 @@ Transform:
   m_GameObject: {fileID: 1523519394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.84402704, y: -2.66719007, z: -.0561523438}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
---- !u!1 &1618348121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1618348124}
-  - 114: {fileID: 1618348123}
-  - 132: {fileID: 1618348122}
-  m_Layer: 0
-  m_Name: Sheep Win
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!132 &1618348122
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618348121}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Text: Team Sheep Wins!
-  m_Anchor: 4
-  m_Alignment: 1
-  m_PixelOffset: {x: 220, y: 80}
-  m_LineSpacing: 1
-  m_TabSize: 0
-  m_Font: {fileID: 0}
-  m_Material: {fileID: 0}
-  m_FontSize: 20
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!114 &1618348123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618348121}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6361154eb4eed344a930d636e9195eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1618348124
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1618348121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

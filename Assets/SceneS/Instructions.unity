@@ -275,6 +275,7 @@ GameObject:
   - 212: {fileID: 1371313517}
   - 114: {fileID: 1371313516}
   - 61: {fileID: 1371313515}
+  - 114: {fileID: 1371313519}
   m_Layer: 0
   m_Name: Play
   m_TagString: Untagged
@@ -342,6 +343,17 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1371313519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1371313514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ed553dbe2de5048bd2079e86b22e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1432169554
 Prefab:
   m_ObjectHideFlags: 0
