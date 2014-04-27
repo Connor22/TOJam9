@@ -31,13 +31,14 @@ public class SharkHealth : MonoBehaviour {
 				renderer.enabled = false;
 				invCounter += Time.deltaTime;
 			} else {
-				renderer.enabled = false;
+				renderer.enabled = true;
 				invCounter += Time.deltaTime;
 			}
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		if (collision.gameObject.tag != "Bounds" && invCounter > -1) {
+		if (collision.gameObject.tag != "Bounds" && invCounter == -1) {
 			SharkHPCur -= 10;
 			invCounter = 0f;
 			LifeRef = GameObject.Find ("Players").GetComponent<PlayerHealth> ();
