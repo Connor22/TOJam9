@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
   - 60: {fileID: 6000000}
+  - 95: {fileID: 9500000}
   m_Layer: 10
   m_Name: Shark
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.6776962, y: .931766808, z: 0}
+  m_LocalPosition: {x: -12, y: 0, z: 0}
   m_LocalScale: {x: -10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,14 +58,43 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: .384838939, y: -.0745522752}
-      - {x: .451004893, y: .138687134}
-      - {x: .202711225, y: .0888227522}
-      - {x: .0726007, y: .302821934}
-      - {x: -.409999996, y: 0}
-      - {x: -.409999996, y: -.159999996}
-      - {x: -.179999992, y: -.269999981}
-      - {x: .380720556, y: -.275290042}
+    - - {x: .669999957, y: -.109999999}
+      - {x: .719999969, y: .119999997}
+      - {x: .719999969, y: .179999992}
+      - {x: .659999967, y: .209999993}
+      - {x: .50999999, y: .099999994}
+      - {x: .429999977, y: .159999996}
+      - {x: .379999995, y: .179999992}
+      - {x: .229999989, y: .239999995}
+      - {x: .0599999987, y: .329999983}
+      - {x: -.0299999993, y: .329999983}
+      - {x: -.049999997, y: .329999983}
+      - {x: -.170000002, y: .189999998}
+      - {x: -.569999993, y: -.0299999993}
+      - {x: -.579999983, y: -.0700000003}
+      - {x: -.579999983, y: -.170000002}
+      - {x: -.439999998, y: -.269999981}
+      - {x: -.340000004, y: -.299999982}
+      - {x: -.25, y: -.319999993}
+      - {x: -.170000002, y: -.329999983}
+      - {x: .0199999996, y: -.329999983}
+      - {x: .229999989, y: -.269999981}
+      - {x: .539999962, y: -.0799999982}
+      - {x: .589999974, y: -.179999992}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c549772d8cf897b4a8de980310b24d6b, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,17 +111,20 @@ MonoBehaviour:
   torpedoCost: 5
   Bomb: {fileID: 100000, guid: 4073c677078662c4c8a1d8eebe01ac2b, type: 2}
   bombCost: 10
-  bombForce: 50
+  bombForce: 40
   Follow: {fileID: 100000, guid: 25990122d46535e439582e6385332f83, type: 2}
   followCost: 30
-  Sin: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
+  followForce: 40
+  Sin: {fileID: 100000, guid: 5096503344760794786583d11e4db625, type: 2}
   sinCost: 15
   energy: 100
   maximumEnergy: 200
   energyPerSecond: 5
-  SetBulletDelay: 35
-  EnergyFull: {fileID: 0}
-  EnergyEmpty: {fileID: 0}
+  SetBulletDelay: 50
+  EnergyFull: {fileID: 2800000, guid: bbf1ae30ef4da904b93c2b4619ff6de1, type: 3}
+  EnergyEmpty: {fileID: 2800000, guid: 9e1b82f33584cae4696ae2cdb188eb22, type: 3}
+  LIGHTNING: {fileID: 2800000, guid: 8071476386dbb854a959d238095ae5a1, type: 3}
+  divider: 15
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,11 +136,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc1b0d6470ef244c974a76164dfa374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SharkHPMax: 100
-  LifeBarFull: {fileID: 0}
-  LifeBarHurt: {fileID: 0}
-  Shark1: {fileID: 0}
+  SharkHPMax: 300
+  LifeBarFull: {fileID: 2800000, guid: c8928ffb237accb47b7fa0130e92a497, type: 3}
+  LifeBarHurt: {fileID: 2800000, guid: e44e1a51eddefc347ae04a557a4bb768, type: 3}
+  Shark1: {fileID: 2800000, guid: 387a60881f9324746bfaf8618ef73093, type: 3}
   SharkHPCur: 0
+  divider: 15
+  invincible: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

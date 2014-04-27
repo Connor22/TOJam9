@@ -14,6 +14,7 @@ public class SharkControl : MonoBehaviour {
 
 	public GameObject Follow;
 	public float followCost = 30.0f;
+	public float followForce = 75.0f;
 
 	public GameObject Sin;
 	public float sinCost = 15.0f;
@@ -86,7 +87,8 @@ public class SharkControl : MonoBehaviour {
 		}
 
 		if ((BulletTime == 0) && (energy >= followCost) && ((Input.GetAxis("SharkFireFollow") > 0) || (Input.GetKey("joystick button 3")))) {
-			Instantiate(Follow, BulletPos, transform.rotation);
+			GameObject follow = Instantiate(Follow, BulletPos, transform.rotation) as GameObject;
+			follow.rigidbody2D.AddForce(new Vector2(followForce, 0f));
 
 			energy -= followCost;
 			BulletTime = SetBulletDelay;

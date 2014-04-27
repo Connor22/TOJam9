@@ -13,9 +13,10 @@ GameObject:
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
-  m_Layer: 12
-  m_Name: Starfish
-  m_TagString: Enemy
+  - 95: {fileID: 9500000}
+  m_Layer: 0
+  m_Name: Jelly
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.14973259, y: -.307303846, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalPosition: {x: .673155308, y: -3.51797724, z: 0}
+  m_LocalScale: {x: -10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -38,10 +39,10 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mass: 1
-  m_LinearDrag: .0500000007
+  m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_FixedAngle: 0
+  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -57,6 +58,20 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .319999993, y: .319999993}
   m_Center: {x: 0, y: 0}
+--- !u!95 &9500000
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64a82e1c8507b6d48be2c2cb8a5184bc, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,11 +80,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f7ff584bf7351439b3e9415b07a74c, type: 3}
+  m_Script: {fileID: 11500000, guid: da36109e572ae984f9a6e71154e793b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 4
-  spin: 0
+  amplitude: 0
+  speed: 0
+  appliedForce: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -81,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a6154035824f248b6641045bd468e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropRate: 20
-  Crate: {fileID: 100000, guid: 7c50b585313f8ac45b0a722f63df3469, type: 2}
+  dropRate: 0
+  Crate: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -104,7 +120,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2536298689
-  m_Sprite: {fileID: 21300000, guid: 8f108915e21a21e44965e50d09077b9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 952039203a9e00345ab97923738fcd08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
