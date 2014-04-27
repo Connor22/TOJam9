@@ -9,9 +9,11 @@ public class SineBehaviour2 : MonoBehaviour {
 	public float speed;
 	public float appliedForce;
 
+
+
 	void Start(){
-		originalY = transform.position.y;		
-		}
+		originalY = transform.position.y;
+	}
 
 	void Update() {
 		currentRange = Mathf.Sin (originalY + amplitude * Time.time);
