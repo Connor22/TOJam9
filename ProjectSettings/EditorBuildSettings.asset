@@ -17,7 +17,9 @@ EditorBuildSettings:
     path: Assets/SceneS/Sheep Win.unity
   - enabled: 1
     path: Assets/SceneS/Shark Win.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/SceneS/Draw Screen.unity
   - enabled: 1
     path: Assets/SceneS/Credits.unity
+  - enabled: 1
+    path: Assets/SceneS/Instructions.unity
