@@ -12,7 +12,8 @@ public class SineBehaviour2 : MonoBehaviour {
 
 
 	void Start(){
-		originalY = transform.position.y;
+		float randomfl = Random.Range(0.5f, 1.5f);
+		originalY = transform.position.y * randomfl;
 	}
 
 	void Update() {
