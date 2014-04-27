@@ -11,8 +11,9 @@ GameObject:
   - 212: {fileID: 21200000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400000}
-  - 60: {fileID: 6000000}
   - 95: {fileID: 9500000}
+  - 82: {fileID: 8200000}
+  - 60: {fileID: 6000000}
   m_Layer: 8
   m_Name: PlayerOne
   m_TagString: Player
@@ -57,11 +58,74 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: -.129999995, y: .109999999}
-      - {x: -.129999995, y: -.109999999}
-      - {x: .129999995, y: -.109999999}
-      - {x: .129999995, y: .109999999}
-      - {x: .129999995, y: .109999999}
+    - - {x: -.0249999985, y: .164999992}
+      - {x: -.185000002, y: .164999992}
+      - {x: -.204999998, y: .144999996}
+      - {x: -.204999998, y: .00499999989}
+      - {x: -.174999997, y: -.0249999985}
+      - {x: -.0850000009, y: -.164999992}
+      - {x: .164999992, y: -.164999992}
+      - {x: .204999998, y: -.0449999981}
+      - {x: .204999998, y: .0549999997}
+      - {x: .155000001, y: .0949999988}
+--- !u!82 &8200000
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 2c228cfce60437f4ab848bf2e95c1d69, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -87,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6761f120a27ddcd4daee57333ca9c858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 30
-  spawnPos: 0
+  force: 50
+  spawnPos: 15
   HorizontalName: P1Horizontal
   VerticalName: P1Vertical
   Fire: P1Fire
@@ -96,7 +160,7 @@ MonoBehaviour:
   Super: {fileID: 100000, guid: 057d498afe13b514ab519eb5e12205e0, type: 2}
   Self: {fileID: 100000}
   OtherP: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
-  SetBulletDelay: 35
+  SetBulletDelay: 20
   invincible: 3
   powerTime: 5
 --- !u!212 &21200000
