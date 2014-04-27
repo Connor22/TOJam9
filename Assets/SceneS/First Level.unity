@@ -568,6 +568,7 @@ MonoBehaviour:
   LifeBarHurt: {fileID: 2800000, guid: e44e1a51eddefc347ae04a557a4bb768, type: 3}
   Shark1: {fileID: 2800000, guid: d5ab2ba49347dbb49860e928e47ed527, type: 3}
   SharkHPCur: 0
+  invincible: 2
 --- !u!95 &443888280
 Animator:
   serializedVersion: 2
@@ -748,6 +749,10 @@ Prefab:
       propertyPath: EnergyFull
       value: 
       objectReference: {fileID: 2800000, guid: bbf1ae30ef4da904b93c2b4619ff6de1, type: 3}
+    - target: {fileID: 11400002, guid: cf335087d0f31d54baa216d907748cff, type: 2}
+      propertyPath: invincible
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: cf335087d0f31d54baa216d907748cff, type: 2}
@@ -962,6 +967,7 @@ MonoBehaviour:
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 624054543}
   SetBulletDelay: 20
+  invincible: 3
 --- !u!95 &624054549
 Animator:
   serializedVersion: 2
@@ -1271,6 +1277,7 @@ MonoBehaviour:
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
   Self: {fileID: 1157207209}
   SetBulletDelay: 20
+  invincible: 3
 --- !u!95 &1157207215
 Animator:
   serializedVersion: 2
@@ -1599,6 +1606,10 @@ Prefab:
       propertyPath: spawnPos
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
+      propertyPath: invincible
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
@@ -1788,6 +1799,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
       propertyPath: spawnPos
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
+      propertyPath: invincible
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6000000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
