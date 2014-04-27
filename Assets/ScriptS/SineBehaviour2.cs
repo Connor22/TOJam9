@@ -13,16 +13,16 @@ public class SineBehaviour2 : MonoBehaviour {
 
 	void Start(){
 		float randomfl = Random.Range(0.5f, 1.5f);
-		originalY = transform.position.y * randomfl;
+		originalY = transform.position.y;
 	}
 
 	void Update() {
 		currentRange = Mathf.Sin (originalY + amplitude * Time.time);
 		if (currentRange > 0) {
-			rigidbody2D.AddForce(new Vector2(speed, appliedForce));		
+			rigidbody2D.AddForce(new Vector2(0f, appliedForce));		
 		}
 		if (currentRange < 0) {
-			rigidbody2D.AddForce (new Vector2 (speed, -appliedForce));	
+			rigidbody2D.AddForce (new Vector2 (0f, -appliedForce));	
 		} 
 		else {
 			rigidbody2D.velocity = new Vector2 (speed, 0f);	

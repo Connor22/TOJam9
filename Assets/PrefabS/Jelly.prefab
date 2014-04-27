@@ -12,9 +12,9 @@ GameObject:
   - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
   - 114: {fileID: 11400000}
-  - 114: {fileID: 11400002}
   - 95: {fileID: 9500000}
-  m_Layer: 0
+  - 114: {fileID: 11400002}
+  m_Layer: 12
   m_Name: Jelly
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -28,8 +28,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .673155308, y: -3.51797724, z: 0}
-  m_LocalScale: {x: -10, y: 10, z: 1}
+  m_LocalPosition: {x: -1.74130952, y: 1.99821091, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -56,7 +56,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .319999993, y: .319999993}
+  m_Size: {x: .330000013, y: .25999999}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9500000
 Animator:
@@ -69,7 +69,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 64a82e1c8507b6d48be2c2cb8a5184bc, type: 2}
   m_CullingMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
 --- !u!114 &11400000
@@ -83,9 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da36109e572ae984f9a6e71154e793b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0
-  speed: 0
-  appliedForce: 0
+  amplitude: 2
+  speed: 1
+  appliedForce: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a6154035824f248b6641045bd468e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropRate: 0
-  Crate: {fileID: 0}
+  dropRate: 20
+  Crate: {fileID: 100000, guid: 7c50b585313f8ac45b0a722f63df3469, type: 2}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
