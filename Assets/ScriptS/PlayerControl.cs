@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject Bullet;
 	public GameObject Self;
 	public int SetBulletDelay;
+	public int invincible;
 
 
 	private Vector3 CurrentPos;
@@ -18,11 +19,13 @@ public class PlayerControl : MonoBehaviour {
 	private float newPos;
 	private PlayerHealth Parent;
 	private SharkHealth SharkRef;
+	private float invCounter;
 
 	// Use this for initialization
 	void Start () {
 		newPos = Random.Range (-9.0f, 9.0f);
 		transform.position = new Vector2 (spawnPos, newPos);
+		invCounter = -1f;
 	}
 
 	// Update is called once per frame
@@ -36,16 +39,31 @@ public class PlayerControl : MonoBehaviour {
 			Instantiate(Bullet, CurrentPos, transform.rotation); 
 			BulletTime = SetBulletDelay;
 		}
+		if (invCounter > -1){
+			gameObject.layer = 12;
+			if (invCounter > invincible){
+				renderer.enabled = true;
+				invCounter = -1f;
+				gameObject.layer = 8;
+			} else if (renderer.enabled == true){
+				renderer.enabled = false;
+				invCounter += Time.deltaTime;
+			} else {
+				renderer.enabled = true;
+				invCounter += Time.deltaTime;
+			}
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		if (collision.gameObject.tag == "Enemy") {
+		if (collision.gameObject.tag == "Enemy" && invCounter == -1) {
 			newPos = Random.Range (-9.0f, 9.0f);
 			Parent = transform.parent.GetComponent<PlayerHealth>();
 			SharkRef = GameObject.Find("Shark").GetComponent<SharkHealth>();
 			if (Parent.LifePool > 0) {
 				transform.position = new Vector2 (spawnPos, newPos);
 				Parent.LifePool -= 1;
+				invCounter = 0f;
 			}
 			else{
 				Parent.PlayerCount -= 1;
