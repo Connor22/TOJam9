@@ -43,6 +43,7 @@ public class PlayerControl : MonoBehaviour {
 			if (powerCounter > powerTime){
 				powerCounter = -1f;
 				speed = 1;
+				anim.SetBool("isPower", false);
 			} else {
 				powerCounter += Time.deltaTime;
 			}
@@ -81,6 +82,7 @@ public class PlayerControl : MonoBehaviour {
 		if (collision.gameObject.tag == "Power") {
 			powerCounter = 0f;
 			speed = 2;
+			anim.SetBool("isPower", true);
 		}
 		if (collision.gameObject.tag == "1Up") {
 			Parent = transform.parent.GetComponent<PlayerHealth>();
