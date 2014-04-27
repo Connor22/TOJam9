@@ -7,7 +7,7 @@ public class LevelGUI : MonoBehaviour {
 	public int healthBarGUIWidth = 128;
 
 	private SharkHealth sharkHealthRef;
-	private int fullHP;
+	private float fullHP;
 	private GameObject healthBarRef;
 	private Vector3 healthBarFullSize;
 
@@ -25,7 +25,7 @@ public class LevelGUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sharkHealthRef = GameObject.Find("Shark").GetComponent<SharkHealth>();
-		fullHP = sharkHealthRef.SharkHP;
+		fullHP = sharkHealthRef.SharkHPMax;
 		healthBarRef = GameObject.Find("Health Bar Foreground");
 		healthBarFullSize = healthBarRef.transform.localScale;
 
@@ -39,7 +39,7 @@ public class LevelGUI : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		int currentHP = sharkHealthRef.SharkHP;
+		float currentHP = sharkHealthRef.SharkHPCur;
 		float currentEnergy = sharkControlRef.energy;
 		int currentLives = playerHealthRef.LifePool;
 

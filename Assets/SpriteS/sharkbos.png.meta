@@ -48,46 +48,46 @@ TextureImporter:
     - name: sharkbos_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 329
-        width: 126
-        height: 62
+        x: 0
+        y: 320
+        width: 150
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sharkbos_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 249
-        width: 120
-        height: 62
+        x: 0
+        y: 240
+        width: 150
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sharkbos_2
       rect:
         serializedVersion: 2
-        x: 33
-        y: 170
-        width: 117
-        height: 66
+        x: 0
+        y: 160
+        width: 150
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sharkbos_3
       rect:
         serializedVersion: 2
-        x: 27
-        y: 91
-        width: 122
-        height: 63
+        x: 0
+        y: 80
+        width: 150
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
     - name: sharkbos_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 9
-        width: 124
-        height: 64
+        x: 0
+        y: 0
+        width: 150
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
   spritePackingTag: 
