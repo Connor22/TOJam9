@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (AudioSource))]
+
 public class PlayerControl : MonoBehaviour {
 
 	public float force = 100f;
@@ -94,6 +96,9 @@ public class PlayerControl : MonoBehaviour {
 			}
 		}
 		if (collision.gameObject.tag == "Enemy" && invCounter == -1) {
+			// play death sound
+			audio.Play();
+
 			newPos = Random.Range (-9.0f, 9.0f);
 			Parent = transform.parent.GetComponent<PlayerHealth>();
 			SharkRef = GameObject.Find("Shark").GetComponent<SharkHealth>();
