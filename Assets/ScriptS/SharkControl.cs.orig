@@ -44,11 +44,8 @@ public class SharkControl : MonoBehaviour {
 
 	void FixedUpdate () {
 		tracker = Input.GetAxis("P3VerticalJoy");
-		if (tracker > -0.30f && tracker < 0.30f){
-			tracker = 0;
-		}
 		// movement
-		rigidbody2D.AddForce (new Vector2 (0f, force * Input.GetAxis ("P3Vertical")  + force * tracker));
+		rigidbody2D.AddForce (new Vector2 (0f, force * Input.GetAxis ("P3Vertical") /* + force * tracker */));
 		anim.SetBool("Fire", false);
 		// energy tracking
 		energy += Time.deltaTime * energyPerSecond;
@@ -89,9 +86,14 @@ public class SharkControl : MonoBehaviour {
 			anim.SetBool("Fire", true);
 		}
 
+<<<<<<< HEAD
 		if ((BulletTime == 0) && (energy >= followCost) && ((Input.GetAxis("SharkFireFollow") > 0) || (Input.GetKey("joystick button 3")))) {
+			Instantiate(Follow, BulletPos, transform.rotation);
+=======
+		if ((BulletTime == 0) && (energy >= followCost) && (Input.GetAxis("SharkFireFollow") > 0)) {
 			GameObject follow = Instantiate(Follow, BulletPos, transform.rotation) as GameObject;
 			follow.rigidbody2D.AddForce(new Vector2(followForce, 0f));
+>>>>>>> 573ab6bab46efe80f34d27d971723c25e39ba6d2
 
 			energy -= followCost;
 			BulletTime = SetBulletDelay;

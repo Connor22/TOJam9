@@ -204,11 +204,11 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1000
+    gravity: 3
     dead: 0
-    sensitivity: 3
-    snap: 1
-    invert: 0
+    sensitivity: 1
+    snap: 0
+    invert: 1
     type: 2
     axis: 1
     joyNum: 0
