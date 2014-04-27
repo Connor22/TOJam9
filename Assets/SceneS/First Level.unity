@@ -533,7 +533,6 @@ GameObject:
   - 114: {fileID: 443888279}
   - 95: {fileID: 443888281}
   - 60: {fileID: 443888275}
-  - 95: {fileID: 443888280}
   m_Layer: 10
   m_Name: Shark
   m_TagString: Untagged
@@ -677,20 +676,6 @@ MonoBehaviour:
   SharkHPCur: 0
   divider: 15
   invincible: 2
---- !u!95 &443888280
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 443888273}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c549772d8cf897b4a8de980310b24d6b, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 0
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!95 &443888281
 Animator:
   serializedVersion: 2
