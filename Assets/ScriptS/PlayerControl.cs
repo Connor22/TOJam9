@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject Bullet;
 	public GameObject Super;
 	public GameObject Self;
+	public GameObject OtherP;
 	public int SetBulletDelay;
 	public int invincible;
 	public int powerTime;
@@ -23,7 +24,6 @@ public class PlayerControl : MonoBehaviour {
 	private SharkHealth SharkRef;
 	private float invCounter;
 	private float powerCounter;
-	private bool isPowerUp;
 	private int speed;
 
 	// Use this for initialization
@@ -32,7 +32,6 @@ public class PlayerControl : MonoBehaviour {
 		transform.position = new Vector2 (spawnPos, newPos);
 		invCounter = -1f;
 		powerCounter = -1f;
-		isPowerUp = false;
 		speed = 1;
 	}
 
@@ -40,14 +39,12 @@ public class PlayerControl : MonoBehaviour {
 	void Update () {
 		if (powerCounter > -1){
 			if (powerCounter > powerTime){
-				isPowerUp = false;
 				powerCounter = -1f;
+				speed = 1;
 			} else {
 				invCounter += Time.deltaTime;
+				speed = 2;
 			}
-		}
-		if (isPowerUp){
-			speed = 2;
 		} else {
 			speed = 1;
 		}
@@ -58,9 +55,9 @@ public class PlayerControl : MonoBehaviour {
 			BulletTime -= 1;
 		}
 		if (Input.GetAxis (Fire) > 0 && BulletTime == 0){
-			if (isPowerUp) {
+			if (powerCounter > -1) {
 				Instantiate(Super, CurrentPos, transform.rotation);
-			}else {
+			} else {
 				Instantiate(Bullet, CurrentPos, transform.rotation);
 			}
 			BulletTime = SetBulletDelay;
@@ -82,6 +79,18 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
+		if (collision.gameObject.tag == "Power") {
+			powerCounter = 0f;
+		}
+		if (collision.gameObject.tag == "1Up") {
+			Parent = transform.parent.GetComponent<PlayerHealth>();
+			Parent.LifePool += 1;
+			if(Parent.PlayerCount == 1){
+				newPos = Random.Range (-9.0f, 9.0f);
+				Instantiate(OtherP, new Vector3 (spawnPos, newPos, 0f), transform.rotation);
+				Parent.PlayerCount += 1;
+			}
+		}
 		if (collision.gameObject.tag == "Enemy" && invCounter == -1) {
 			newPos = Random.Range (-9.0f, 9.0f);
 			Parent = transform.parent.GetComponent<PlayerHealth>();
