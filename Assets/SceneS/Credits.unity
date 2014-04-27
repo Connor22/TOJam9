@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeElapsed: 0
-  waitTime: 2
-  stopTime: 22
+  waitTime: 1
+  stopTime: 21
   speed: 1
 --- !u!50 &130299565
 Rigidbody2D:

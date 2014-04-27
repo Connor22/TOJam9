@@ -62,7 +62,7 @@ public class PlayerControl : MonoBehaviour {
 			BulletTime = SetBulletDelay;
 		}
 		if (invCounter > -1){
-			gameObject.layer = 12;
+			gameObject.layer = 13;
 			if (invCounter > invincible){
 				renderer.enabled = true;
 				invCounter = -1f;
