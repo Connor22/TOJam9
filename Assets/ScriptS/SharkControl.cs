@@ -26,6 +26,7 @@ public class SharkControl : MonoBehaviour {
 
 	public Texture2D EnergyFull;
 	public Texture2D EnergyEmpty;
+	public Texture2D LIGHTNING;
 	public float divider;
 
 	private float height;
@@ -97,5 +98,6 @@ public class SharkControl : MonoBehaviour {
 		height = Screen.height / divider;
 		GUI.DrawTexture (new Rect (10f, Screen.height - height - 10f, Screen.width / 4, height), EnergyEmpty, ScaleMode.StretchToFill);
 		GUI.DrawTexture (new Rect (10f, Screen.height - height - 10f, Screen.width / 4 / (maximumEnergy / energy), height), EnergyFull, ScaleMode.StretchToFill);
+		GUI.DrawTexture (new Rect (Screen.width / 4 + 20f, Screen.height - height - 10f, height / 2, height), LIGHTNING, ScaleMode.StretchToFill);
 	}
 }
