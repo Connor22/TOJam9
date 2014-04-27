@@ -38,9 +38,8 @@ public class SharkControl : MonoBehaviour {
 	void Start () {
 		anim = gameObject.GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	void FixedUpdate () {
 		// movement
 		rigidbody2D.AddForce (new Vector2 (0f, force * Input.GetAxis ("P3Vertical")));
 		anim.SetBool("Fire", false);
