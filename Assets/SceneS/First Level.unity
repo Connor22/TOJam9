@@ -1082,9 +1082,12 @@ MonoBehaviour:
   VerticalName: P2Vertical
   Fire: P2Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
+  Super: {fileID: 100000, guid: dbdc27c67633e2c4e843241563015f6a, type: 2}
   Self: {fileID: 624054543}
+  OtherP: {fileID: 100000, guid: 820008c9118443a48ad2694b616b03a2, type: 2}
   SetBulletDelay: 20
   invincible: 3
+  powerTime: 0
 --- !u!95 &624054549
 Animator:
   serializedVersion: 2
@@ -1407,9 +1410,12 @@ MonoBehaviour:
   VerticalName: P1Vertical
   Fire: P1Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
+  Super: {fileID: 100000, guid: dbdc27c67633e2c4e843241563015f6a, type: 2}
   Self: {fileID: 1157207209}
+  OtherP: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
   SetBulletDelay: 20
   invincible: 3
+  powerTime: 0
 --- !u!95 &1157207215
 Animator:
   serializedVersion: 2

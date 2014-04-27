@@ -9,9 +9,12 @@ public class PlayerControl : MonoBehaviour {
 	public string VerticalName;
 	public string Fire;
 	public GameObject Bullet;
+	public GameObject Super;
 	public GameObject Self;
+	public GameObject OtherP;
 	public int SetBulletDelay;
 	public int invincible;
+	public int powerTime;
 
 
 	private Vector3 CurrentPos;
@@ -20,23 +23,43 @@ public class PlayerControl : MonoBehaviour {
 	private PlayerHealth Parent;
 	private SharkHealth SharkRef;
 	private float invCounter;
+	private float powerCounter;
+	private int speed;
 
 	// Use this for initialization
 	void Start () {
 		newPos = Random.Range (-9.0f, 9.0f);
 		transform.position = new Vector2 (spawnPos, newPos);
 		invCounter = -1f;
+		powerCounter = -1f;
+		speed = 1;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.AddForce(new Vector2(force * Input.GetAxis(HorizontalName), force * Input.GetAxis(VerticalName)));
+		if (powerCounter > -1){
+			if (powerCounter > powerTime){
+				powerCounter = -1f;
+				speed = 1;
+			} else {
+				invCounter += Time.deltaTime;
+				speed = 2;
+			}
+		} else {
+			speed = 1;
+		}
+		rigidbody2D.AddForce(new Vector2(speed * force * Input.GetAxis(HorizontalName), 
+		                                 speed * force * Input.GetAxis(VerticalName)));
 		CurrentPos = new Vector3(transform.position.x - 1.5f, transform.position.y - 0.5f);
 		if (BulletTime > 0) {
 			BulletTime -= 1;
 		}
 		if (Input.GetAxis (Fire) > 0 && BulletTime == 0){
-			Instantiate(Bullet, CurrentPos, transform.rotation); 
+			if (powerCounter > -1) {
+				Instantiate(Super, CurrentPos, transform.rotation);
+			} else {
+				Instantiate(Bullet, CurrentPos, transform.rotation);
+			}
 			BulletTime = SetBulletDelay;
 		}
 		if (invCounter > -1){
@@ -56,6 +79,18 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
+		if (collision.gameObject.tag == "Power") {
+			powerCounter = 0f;
+		}
+		if (collision.gameObject.tag == "1Up") {
+			Parent = transform.parent.GetComponent<PlayerHealth>();
+			Parent.LifePool += 1;
+			if(Parent.PlayerCount == 1){
+				newPos = Random.Range (-9.0f, 9.0f);
+				Instantiate(OtherP, new Vector3 (spawnPos, newPos, 0f), transform.rotation);
+				Parent.PlayerCount += 1;
+			}
+		}
 		if (collision.gameObject.tag == "Enemy" && invCounter == -1) {
 			newPos = Random.Range (-9.0f, 9.0f);
 			Parent = transform.parent.GetComponent<PlayerHealth>();
@@ -64,8 +99,7 @@ public class PlayerControl : MonoBehaviour {
 				transform.position = new Vector2 (spawnPos, newPos);
 				Parent.LifePool -= 1;
 				invCounter = 0f;
-			}
-			else{
+			} else {
 				Parent.PlayerCount -= 1;
 				if(Parent.PlayerCount > 0){
 					Destroy(gameObject);
@@ -73,7 +107,7 @@ public class PlayerControl : MonoBehaviour {
 				else {
 					if (SharkRef.SharkHPCur == 0){
 						Application.LoadLevel ("Draw Screen");
-					}else{
+					} else {
 						Application.LoadLevel ("Shark Win");
 					}
 				}
