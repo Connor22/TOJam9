@@ -3,8 +3,8 @@ using System.Collections;
 
 public class StarfishBehaviour : MonoBehaviour {
 
-	public float speed;
-	// public float force;
+	//public float speed;
+	public float force;
 
 	private GameObject target;
 	
@@ -31,17 +31,20 @@ public class StarfishBehaviour : MonoBehaviour {
 
 	}
 
-	void Update () {
+	void FixedUpdate () {
 
 		target = FindClosest();
+
+		// look at target
 		Quaternion rotation = new Quaternion();
 		transform.LookAt(target.transform);
-		transform.position = Vector2.MoveTowards((Vector2) transform.position, 
-	                                         (Vector2) target.transform.position, speed);
 		rotation.SetLookRotation(Vector3.forward, Vector3.up);
 		transform.localRotation = rotation;
 
-
+		// accelerate towards target
+		Vector2 targetDirection = new Vector2(target.transform.position.x - transform.position.x, target.transform.position.y - transform.position.y);
+		targetDirection.Normalize();
+		rigidbody2D.AddForce(targetDirection * force);
 	}
 
 	void OnCollisionEnter2D (Collision2D collision) {

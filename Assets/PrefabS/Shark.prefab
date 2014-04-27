@@ -114,6 +114,7 @@ MonoBehaviour:
   bombForce: 40
   Follow: {fileID: 100000, guid: 25990122d46535e439582e6385332f83, type: 2}
   followCost: 30
+  followForce: 40
   Sin: {fileID: 100000, guid: 745f9820446a9bb4b9d00bdbcf91db5a, type: 2}
   sinCost: 15
   energy: 100
