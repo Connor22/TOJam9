@@ -93,7 +93,7 @@ MonoBehaviour:
   VerticalName: P1Vertical
   Fire: P1Fire
   Bullet: {fileID: 100000, guid: 99cf4cab81d0d9e4da568de6c8701649, type: 2}
-  Super: {fileID: 100000, guid: dbdc27c67633e2c4e843241563015f6a, type: 2}
+  Super: {fileID: 100000, guid: 057d498afe13b514ab519eb5e12205e0, type: 2}
   Self: {fileID: 100000}
   OtherP: {fileID: 100000, guid: 8e62fff89c868bb45b9384a292340b75, type: 2}
   SetBulletDelay: 35
